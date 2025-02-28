@@ -1,6 +1,7 @@
 import numpy as np
-from pyx import canvas, deco, path, style, text, trafo
+from pyx import canvas, deco, path, style, text, trafo, unit
 
+unit.set(wscale=1.2, xscale=0.9)
 text.set(text.LatexRunner, texenc="utf-8")
 text.preamble(r"""\usepackage{helvet}
                   \usepackage[T1]{fontenc}
@@ -22,9 +23,9 @@ y2 = x2**2
 p = path.path(path.moveto(x1[0], y1[0]))
 for x, y in zip(x1[1:], y1[1:]):
     p.append(path.lineto(x*factor_x, y*factor_y))
-c.stroke(p)
+c.stroke(p, [style.linewidth.thick])
 p = path.path(path.moveto(x2[0], y2[0]))
 for x, y in zip(x2[1:], y2[1:]):
     p.append(path.lineto(x*factor_x, y*factor_y))
-c.stroke(p, [style.linestyle.dashed])
+c.stroke(p, [style.linestyle.dashed, style.linewidth.thick])
 c.writePDFfile()
