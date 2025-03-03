@@ -13,8 +13,8 @@ c.stroke(path.line(2, 0, 2, 4.5), [deco.earrow])
 c.text(2.2, 4.5, 'Impuls', [text.valign.top])
 
 rng = np.random.default_rng()
-data = rng.normal(scale=0.4, size=(60000, 2))
+data = rng.normal(scale=0.4, size=(40000, 2))
 for x, y in zip(data[:, 0], data[:, 1]):
-    c.fill(path.circle(x+2, y+2, 0.004))
+    c.fill(path.circle(x+2, y+2, 0.005))
 
 c.writePDFfile()
