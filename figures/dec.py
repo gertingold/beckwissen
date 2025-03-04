@@ -32,15 +32,18 @@ d55p = [(0.133110202, 5.4388219),
         (1.59960144, -0.387611604)]
 
 c = canvas.canvas()
-c.stroke(path.rect(0, 0, 6.4, 4))
+graphrect = path.rect(0, 0, 6.4, 4)
+c.stroke(graphrect)
 c.stroke(path.line(0, convert_y(0), 6.4, convert_y(0)), [style.linestyle.dotted])
-x = np.linspace(0, 2, 40)
+x = np.linspace(0, 2, 100)
+c1 = canvas.canvas([canvas.clip(graphrect)])
 for coeffs, attrs in zip((a, b), (style.linewidth.Thick, style.linewidth.normal)):
     data = coeffs[0]*np.exp(-(1-np.exp(-coeffs[1]*x))*2*coeffs[2]*np.sin(coeffs[3])**2)*np.cos((1-np.exp(-coeffs[1]*x))*coeffs[2]*np.sin(2*coeffs[3]))
     p2 = path.path(path.moveto(convert_x(x[0]), convert_y(data[0])))
     for xp, yp in zip(x[1:], data[1:]):
         p2.append(path.lineto(convert_x(xp), convert_y(yp)))
-    c.stroke(p2, [attrs])
+    c1.stroke(p2, [attrs])
+c.insert(c1)
 
 for x, y in d33p:
     xp = convert_x(x)
