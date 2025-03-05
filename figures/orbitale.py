@@ -12,7 +12,7 @@ def orbital(n, m, offset):
         p.append(path.lineto(xp, yp))
     c.stroke(p, [trafo.translate(offset, 0)])
 
-unit.set(wscale=1.1, xscale=0.9)
+unit.set(wscale=1.1, xscale=0.85)
 text.set(text.LatexRunner, texenc="utf-8")
 text.preamble(r"""\usepackage{helvet}
                   \usepackage[T1]{fontenc}

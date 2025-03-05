@@ -10,7 +10,7 @@ def mode(height, n, w):
         p.append(path.lineto(xp, yp+height))
     c.stroke(p)
 
-unit.set(wscale=1.3, xscale=0.9)
+unit.set(wscale=1.3, xscale=0.85)
 text.set(text.LatexRunner, texenc="utf-8")
 text.preamble(r"""\usepackage{helvet}
                   \usepackage[T1]{fontenc}

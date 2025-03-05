@@ -13,7 +13,7 @@ data = [(0, 0.420844), (0.250965, 0.626649), (0.501931, 0.668865), (0.752896, 0.
         (8.99614, 0.686016), (9.2471, 0.734828), (9.49807, 0.78496), (9.74903, 0.734828),
         (10, 0.75066)]
 
-unit.set(wscale=1.3, xscale=0.9)
+unit.set(wscale=1.3, xscale=0.85)
 text.set(text.LatexRunner, texenc="utf-8")
 text.preamble(r"""\usepackage{helvet}
                   \usepackage[T1]{fontenc}

@@ -7,7 +7,7 @@ def convert_x(x, lenx=6.4):
 def convert_y(y, leny=4):
     return (y+3)*4/23
 
-unit.set(wscale=1.3, xscale=0.9)
+unit.set(wscale=1.3, xscale=0.85)
 text.set(text.LatexRunner, texenc="utf-8")
 text.preamble(r"""\usepackage{helvet}
                   \usepackage[T1]{fontenc}

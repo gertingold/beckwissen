@@ -1,7 +1,7 @@
 import numpy as np
 from pyx import canvas, deco, path, style, text, trafo, unit
 
-unit.set(wscale=1.2, xscale=0.9)
+unit.set(wscale=1.2, xscale=0.85)
 text.set(text.LatexRunner, texenc="utf-8")
 text.preamble(r"""\usepackage{helvet}
                   \usepackage[T1]{fontenc}
