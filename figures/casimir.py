@@ -27,12 +27,14 @@ for n in range(4):
     c.stroke(path.line(w+0.3, height, w+0.5, height))
     mode(height, n+1, w)
 
+c.text(-d-0.3, h, r'\large a\vphantom{b}', [text.halign.right, text.valign.top])
 c.fill(path.rect(-d, 0, d, h), [color.grey(0.7)])
 c.stroke(path.line(0, 0, 0, h), [style.linewidth.Thin])
 c.fill(path.rect(w, 0, d, h), [color.grey(0.7)])
 c.stroke(path.line(w, 0, w, h), [style.linewidth.Thin])
 
 offset = w+3
+c.text(offset-d-1, h, r'\large b', [text.halign.right, text.valign.top])
 c.fill(path.rect(offset-d, 0, d, h), [color.grey(0.7)])
 c.stroke(path.line(offset, 0, offset, h), [style.linewidth.Thin])
 c.fill(path.rect(offset+w, 0, d, h), [color.grey(0.7)])
