@@ -45,7 +45,7 @@ c.text(5.95, 2.1, 'B', [text.halign.center])
 c.text(6.85, 2.1, 'C', [text.halign.center])
 c.text(6.85, 1.1, 'D', [text.halign.center, text.valign.top])
 
-c.text(0.1, 3.6, 'a')
-c.text(5.5, 3.6, 'b')
+c.text(0.1, 3.6, 'a', [text.size.Large])
+c.text(5.5, 3.6, 'b', [text.size.Large])
 
 c.writePDFfile()
