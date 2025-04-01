@@ -25,7 +25,7 @@ c.stroke(p)
 x, y = p.at(p.arclentoparam(0.2))
 c.stroke(path.line(x, y-0.23, x, y+0.27),
          [deco.earrow.Small, style.linewidth(style._defaultlinewidth*0.9)])
-c.text(-0.45, 1.9, r'a')
+c.text(-0.45, 1.9, r'a', [text.size.Large])
 
 xshift = 3.6
 c.fill(path.circle(0, 0, r), [circletrafo, trafo.translate(xshift+1.5, 1.5), circlegrey])
@@ -41,7 +41,7 @@ c.stroke(p, [deco.earrow.small])
 x, y = p.at(p.arclentoparam(p.arclen()-0.3))
 c.stroke(path.line(-0.23, 0, 0.27, 0),
          [trafo.translate(x, y), deco.earrow.Small, style.linewidth(style._defaultlinewidth*0.9)])
-c.text(xshift-0.45, 1.9, r'b')
+c.text(xshift-0.45, 1.9, r'b', [text.size.Large])
 
 xshift = 1.4
 yshift = -2.0
@@ -66,6 +66,6 @@ x, y = p.at(p.arclentoparam(p.arclen()-0.3))
 c.stroke(path.line(0, -0.23, 0, 0.27),
          [trafo.rotate(-90).translated(x, y), raygrey, deco.earrow.Small,
           style.linewidth(style._defaultlinewidth*0.9)])
-c.text(xshift-0.45, yshift+1.9, r'c')
+c.text(xshift-0.45, yshift+1.9, r'c', [text.size.Large])
 
 c.writePDFfile()
