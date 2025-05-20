@@ -39,6 +39,7 @@ c.stroke(p, [style.linewidth.Thick, deco.earrow.large])
 c.text(0.3, 1.7, 'A', [text.halign.center])
 c.text(1.6, 1.7, 'B', [text.halign.center])
 c.text(2.9, 1.7, 'C', [text.halign.center])
+c.text(4.2, 1.7, 'D', [text.halign.center])
 
 c.text(5.95, 1.1, 'A', [text.halign.center, text.valign.top])
 c.text(5.95, 2.1, 'B', [text.halign.center])
