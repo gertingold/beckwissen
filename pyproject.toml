@@ -1,0 +1,11 @@
+[project]
+name = "beckwissen"
+version = "0.1.0"
+description = "Environment for creating the figures for Beck Wissen book on quantum theory"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+	"numpy",
+	"scipy",
+	"pyx",
+]
